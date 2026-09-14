@@ -6,7 +6,17 @@ Most people do not need to clone this repository. The complete firmware update p
 
 ## Nuerolynx changes
 
-The main addition is the NLX Electrical Calculator. It combines Ohm's law with two conductor voltage drop and wire sizing calculations for field and bench work. The app reports delivered voltage, wire loss, maximum run length, and a sizing verdict while keeping the limits of a handheld design aid clear.
+### NLX Credential Suite
+
+The firmware adds the [NLX Credential Suite](https://github.com/nuerolynx/Nuerolynx-Flipper-Firmware/tree/main/applications_user/nlx_credential_suite), a passive physical access credential inspector for authorized work. It brings NFC and smart cards, Picopass and iCLASS, 125 kHz RFID, and iButton credentials into one scan flow. It can identify more than one technology on the same credential, decode supported Wiegand formats, save readable inspection reports, and open the appropriate specialist application when deeper work is needed.
+
+The normal scan path does not write, emulate, fuzz, or recover keys. Advanced actions require a deliberate Authorized Lab acknowledgment before the suite hands the credential to a separately maintained specialist tool.
+
+The Credential Suite source is stored in the main firmware repository so its version stays tied to the firmware release. It is already compiled into the one file Nuerolynx update package.
+
+### NLX Electrical Calculator
+
+The firmware also adds the NLX Electrical Calculator. It combines Ohm's law with two conductor voltage drop and wire sizing calculations for field and bench work. The app reports delivered voltage, wire loss, maximum run length, and a sizing verdict while keeping the limits of a handheld design aid clear.
 
 The bundle also contains small identity and default value changes that keep included applications consistent with the Nuerolynx firmware.
 
